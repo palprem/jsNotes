@@ -1,0 +1,39 @@
+1> html
+2>CSS
+3>JS
+4>React
+
+
+Que:- Diffrance b/w div and span?
+Ans:- Both tag used  to represent the part of webpage
+        div) div tag  is division  div tag used as a block part of 
+
+Que:- What is box model?
+Que:- Formating text?
+Que:- what is form method in html?
+Que:- str1='a' str2='A' what is str1==str2
+Que:- typeof NaN?
+Que:- Diffrance b/w map and filter
+Que:- arr.sort()
+/* let arr1 = [1,11,23], arr2=[2,34,10]
+ arr1[100]=1103
+console.log(arr1.length)
+
+Math.max()
+(1 + '1')
+(1 - '1')
+let x = [1,2,3,4]
+x[-1]
+arr = [1,11,23,2,3,34,10]
+[1,2,3,10,11,23,34]
+[1,2,3] + [4,5,6]
+arr = [1,2,3,4]
+arr[100] = 1123
+arr.length */
+/* let arr = [1,11,23,2,3,34,10] */
+/* console.log(arr.sort()) */
+
+what is hosting in javascript?
+Ans: JavaScript Hoisting refers to the process whereby the interpreter appears to move the declaration of 
+   functions, variables or classes to the top of their scope, prior to execution of the code. Hoisting 
+   allows functions to be safely used in code before they are declared.

@@ -1,0 +1,9 @@
+Que: WHat is Redux?
+Ans: Redux is an open-source library made using the scripting language javascript.
+  Redux's primary use lies in managing and centralizing application state and it is usually
+  used along with javascript library.
+  a) Redux includes a single store per application. Rether than placing state information in 
+     multiple stores across the app, redux keeps everything in one region of the application
+
+Que: What is Redux in reactjs?
+Ans: Redux in react is the offical react binding for redux which allows the components in react

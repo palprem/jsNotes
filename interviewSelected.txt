@@ -1,0 +1,99 @@
+1: what is Babel ?
+Ans:As any language, Javascript also has versions named ECMAScript (short for ES). Currently, most browsers support ES5. 
+ES5 used to be good even though it was painful to code in it. Remember, this not reading from inside callback functions? 
+The new version of Javascript, ES6, also known as ES2015 (specs of the language were finalized in June 2015) makes Javascript 
+great again.All the great features of ES6 come with one big problem — majority of browsers do not fully support them. 
+That’s when Babel comes to play. Babel is a JS transpiler that converts new JS code into old ones. It is a very flexible 
+tool in terms of transpiling. One can easily add presets such as es2015, es2016, es2017, or env; so that Babel compiles 
+them to ES5.
+
+What is Webpack?
+Ans: Webpack is a modular build tool that has two sets of functionality — Loaders and Plugins. Loaders transform the source 
+    code of a module. For example, style-loader adds CSS to DOM using style tags. sass-loader compiles SASS files to CSS. 
+    babel-loader transpiles JS code given the presets. Plugins are the core of Webpack.They can do things that loaders can’t.
+    For example, there is a plugin called UglifyJS that minifies and uglifies the output of webpack.
+
+What is ES2015?
+Ans:The "use strict" Directive
+    String.trim()
+    Array.isArray()
+    Array.forEach()
+    Array.map()
+    Array.filter()
+    Array.reduce()
+    Array.reduceRight()
+    Array.every()
+    Array.some()
+    Array.indexOf()
+    Array.lastIndexOf()
+    JSON.parse()
+    JSON.stringify()
+    Date.now()
+    Property Getters and Setters
+    New Object Property Methods
+
+ What is ES6?
+Ans: New Features in ES6
+    The let keyword
+    The const keyword
+    Arrow Functions
+    For/of
+    Map Objects
+    Set Objects
+    Classes
+    Promises
+    Symbol
+    Default Parameters
+    Function Rest Parameter
+    String.includes()
+    String.startsWith()
+    String.endsWith()
+    Array.from()
+    Array keys()
+    Array find()
+    Array findIndex()
+    New Math Methods
+    New Number Properties
+    New Number Methods
+    New Global Methods
+    Iterables Object.entries
+    JavaScript Modules
+
+ES7?
+Array.prototype.includes()
+Exponentiation Operator
+
+4. What is multiline string?
+Ans: var myString ='Javatpoint is a website of technologies, ' +  
+         'which provides tutorials of different technologies and tools. ' +  
+         'Here you will get tutorials in detail' +  
+         'like theory as well as practical implementation.' +  
+         '<br> We will try to provide you the best knowledge from our side.' +  
+         'Student, teachers, and industry professionals can learn from here.';  
+                 
+       document.write(myString);
+
+5. What is spred Operator?
+Ans: the spred Operator is anew addition to the set of operations in javascript.
+    it take in an iterable(e.g an array) and expands it into individual elements.
+    the spred operator denoted by three dots(...)
+    exp: a) let array1 = ['h', 'e', 'y'];
+                let array2 = [...array1];
+                console.log(array2);
+            b) let baked_desserts = ['cake', 'cookie', 'donut'];
+                let desserts = ['icecream', 'flan', 'frozen yoghurt', ...baked_desserts];
+                console.log(desserts);
+                //Appending baked_desserts after flan
+                let desserts2 = ['icecream', 'flan', ...baked_desserts, 'frozen yoghurt'];
+                console.log(desserts2);
+
+6. What is rest operator?
+Ans:Rest parameter: collects all remaining elements into an array.
+    function add(...args) {
+    let result = 0;
+    for (let arg of args) result += arg;
+    return result
+    }
+    add(1) // returns 1
+    add(1,2) // returns 3
+    add(1, 2, 3, 4, 5) // returns 15

@@ -1,0 +1,352 @@
+1. What is javascrit?
+Ans:-> javascrit is a high level programing languge,high level programing means matchine indepednent.
+       javascrit is a interpreted programing languge, means when u run a javascrit program, it is on the spot
+       chenge in matchine lavel languge and give output.
+       its also OOP, its untype datatype, its more use in validation, communicate with server,
+What is Null and Undifind?
+Ans;-> Null means an empty or non-existent value. Null is assigned, and explicitly means nothing.null is also an object. Interestingly,
+       var test1 = null;
+       console.log(test1);
+       // null
+       Undefined means a variable has been declared, but the value of that variable has not yet been defined
+       Exp: var a;
+            console.log(a);
+            Output: Undefined
+      
+      if and else in javascrit:if(condito){
+                                   //code
+                                 }
+                                 else{
+                                   //code
+                                 }
+
+Switch statement:
+       Switch(expression){
+              cose constant : code;
+                              break;
+              cose constant : code;
+                              break;
+              default code;
+       }
+
+loop:
+       1.for
+       2.while
+       3.do while
+function:
+
+Array: its store multiple value in single variable.
+       proerty:length;
+       method: sqrt(),pop(),push(),shft(),update();
+       A special method in java script in javascript its return boolean value if conditon occer.
+       exp: arr['e','w','q'];
+       k=arr.includes("w");
+       its return k = true
+
+
+PROMPT Box: javascrit dialog Boxes Alert, Prompt, Confirmation Prompt Box. A prompt box is often
+              used if you want the user to input a value before enterning a page.
+              when a prompt box pops up, the user will have to click either "ok" or"Cancle" to 
+              proceed after entering an input value.
+
+Confirm Box: A confirmation dailog box is mostly used to take user`s permission on any option it display
+              a dialog box with two buttons: Okk and Cancle.
+
+              if the user clicks on the Ok button , the window method Confirm() will return true.
+              if user clicks on the Cancle button , then Confirm() returns False.
+
+String: 
+       0: The length property returns the length of a string
+       1:The charAt() method returns the character at a specified index (position) in a string
+       2: Finding a String in a String
+       The indexOf() method returns the index of (the position of) the first occurrence of a specified text in a string
+       3: The lastIndexOf() method returns the index of the last occurrence of a specified text in a string
+       Both the indexOf(), and the lastIndexOf() methods return -1 if the text is not found
+       4: The replace() method replaces a specified value with another value in a string
+       5:A string is converted to upper case with toUpperCase()
+       6:A string is converted to lower case with toLowerCase()
+       7: concat() joins two or more strings 
+
+DOM:
+
+Accessong DOM Element in js:
+                     a) By Id,
+                     b) By class
+
+       Parant Child Sibling:
+
+Print: print page in javascript, full page and secific portion
+       window.print();
+       JavaScript | Window print() Method
+       Page print in JavaScript is a simple code in JavaScript used to print the content of the web pages.
+
+       The print() method prints the contents of the current window.
+       It basically opens Print dialog box which lets you choose between various printing options.
+       Syntax:
+
+       window.print()
+       Parameters - No parameters required
+       Returns - This function do not return anything
+Events in javascrit:
+       intraction of javascrit and HTML handled by Events.
+       onclick, onmouse[onmousedown, onmouseenter, onmouseup, onmouseleave, onmouseout]
+
+Date with javascrit:
+       var = new Date();
+       getFullYear()(yyyy), getMonth()(0-11),getDate()(1-31)
+       var d= new Date();
+       document.write(d); Output:Fri Apr 23 2021 19:15:08 GMT+0530 (India Standard Time)
+
+Dynamic Clock in JavaScript:
+       a)setInterval()= set time interval, b)clearInterval()=clear time interval
+       its make dimanitcly time call.
+
+SetTimeout function:
+       The setTimeout() method calls a function or evaluates an expression after a specified number of
+       milliseconds. Tip: The function is only executed once. If you need to repeat execution, use the
+       setInterval() method. Tip: Use the clearTimeout() method to prevent the function from running.
+
+Scroll Effect:
+
+Eval function: the eval() function evaluater or executer an argument.
+
+SCopeChain:scope chain simply the locations here identifiers are declared that is searched to resolve the
+       value of an expression. Exexution context refers to scope.
+
+Javascript Objects: object is a collection of named valuees. the named values, in javascript objects, are
+       called properties. Objects are variables containing vriables. the values are written as name: values pairs
+       (name and value separated by  colon).
+
+BMI(Body Mass Index)
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1. Regular function:
+    As seen in the previous section, the regular function can easily construct objects.
+    For example, the new Car() function creates instances of a car:
+    function Car(color) {
+    this.color = color;
+    }
+    const redCar = new Car('red');
+    redCar instanceof Car;
+
+    If the return statement is missing, or there’s no expression after return statement, the regular function implicitely returns undefined:
+
+    function myEmptyFunction() {
+    42;
+    }
+    function myEmptyFunction2() {
+    42;
+    return;
+    }
+    myEmptyFunction();  // => undefined
+    myEmptyFunction2(); // => undefined
+
+2. Arrow function
+    A consequence of this resolved lexically is that an arrow function cannot be used as a constructor.
+    If you try to invoke an arrow function prefixed with new keyword, JavaScrip throws an error:
+    const Car = (color) => {
+    this.color = color;
+    };
+    const redCar = new Car('red'); //error
+    You can return values from the arrow function the same way as from a regular function, but with one useful exception.
+    If the arrow function contains one expression, and you omit the function’s curly braces, then the expression is implicitly returned. These are the inline arrows function.
+    const increment = (num) => num + 1;
+    increment(41); // => 42
+
+Call Back function:A callback is a function passed as an argument to another function
+    This technique allows a function to call another function
+    A callback function can run after another function has finished
+
+    exp:
+    function myDisplayer(some) {
+    document.getElementById("demo").innerHTML = some;
+    }
+
+    function myCalculator(num1, num2, myCallback) {
+    let sum = num1 + num2;
+    myCallback(sum);
+    }
+    myCalculator(5, 5, myDisplayer);When you pass a function as an argument, remember not to use parenthesis.
+
+Asynchronous JavaScript:
+    "I will finish later!"
+    Functions running in parallel with other functions are called asynchronous
+    A good example is JavaScript setTimeout()
+
+    {<h1 id="demo"></h1>
+
+    <script>
+    setInterval(myFunction, 1000);
+
+    function myFunction() {
+    let d = new Date();
+    document.getElementById("demo").innerHTML=
+    d.getHours() + ":" +
+    d.getMinutes() + ":" +
+    d.getSeconds();
+    }
+    </script>
+    }}
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+Data Type:
+    a)Primitive data type:
+        number, string, boolean, null, undefined,symbol,bigint.
+        primitive values are data that are stored on the stack, and stored directly in the location that the varriable accesse.
+    b)Refrence Data type:
+        its values are objects that are stored in the heap, and rafrence value st in the varriable location is a pointer to a location
+        in memory where th object is stored.
+
+Fat Arrow function:
+    Arrow functions, introduced in ES6, provides a concise way to write functions in JavaScript.
+    Another significant advantage it offers is the fact that it does not bind its own this. In other words, the context inside arrow
+    functions is lexically or statically defined.
+    const addfun = (a,b)=>{
+        //code
+    }
+    addfun(5,6);
+    Abstract Tree: its define,How JavaScript code runs in the browser JS Engine.  JavaScript is what is called a Client-side Scripting Language.
+    That means that it is a computer programming language that runs inside an Internet browser
+
+Excution context:
+    when we want to run a JavaScript code on browser(v8 engine), we need a envoirment. i.e. called Excution context.
+    JavaScript engine creates the global Excution context before it starts to Excution any code.
+    before starts any context its belong to global Excution context, when its called its work in its own invoirnment.
+    its have 3 part:a)variable object
+                    b)scope chain,
+                    c) this variable
+
+    imp:excution context object have two phase:
+    a) Creation phase
+        1st is variable object are created, 2nd is scope chain are created, 3rd this variable
+        a) variable object:
+            1.for each function(function decleration) a property is created in the variable object.which is pointing to that function
+            2.for each variable(variable decleration) a property is created in the variable object, which is then set to undefined.
+            3.Argument objects are created that were passes in to the fuction.
+            piont 1 and 2 is called Hosting in JavaScript. Hosting is a JavaScript mechanism where variable and function decleration are 
+            moved to the top of their scope before the code excution.
+        imp :function hosting and variable hosting
+    b)Excution phase
+        in excution phase  have current excution context run line by line
+
+Excution stack: its also known as "calling stack" is stack with a LIFO(last in first out) structure, which is used to store all the 
+    excution context during the code excution.
+
+Scope Chain:-> the Scope chain is used to resolve the value of variable names in JavaScript, Scope chain in JavaScript is laxically defined, 
+    while means that we can see what the scope chain will be by looking at the code.
+    At the top of the scope chain is the global scope, which is the window object of the browser.
+
+Lexical Scoping: inner function can get access to their parent function variable but he vice-versa is not true.
+
+Use strict:
+
+This keyword: JavaScript this keyword refers to the object it belong to. it has diffrent values depending on where it is used. this refers to the global object.
+
+Data type in JavaScript:1) primitive type data type exp:number, string, boolean, undefined,null, symbol.
+    when any data type has its own values i.e. called primitive type data type, like var a=1;
+    2) non primitive data type: its have refrence not have value, non primitive type have only object.
+        in JavaScript has every thing an object.
+        1) funcion is an object:
+        const xyt=()=>{
+            //code
+        }
+        xyt.name='pre';
+        console.log(xyz);// its working like an object.
+        2)array is an object:
+Pass by value and Pass by refrence:
+
+Ajax: 1) ajax obj xmlhtpd
+      2) obj req open 
+      3) obj send
+      4) state and status
+      5) responce add data
+    
+Event Loop:
+    The Event Loop is one of the most important aspects to understand about Asynchronous JavaScript. Any JavaScript code that takes too long to return 
+    back control to the event loop will block the execution of any JavaScript code in the page, even block the UI thread, and the user cannot click 
+    around, scroll the page, and so on. main work of event loop is send the code from massege queue to excution stack for excution.
+
+Call Back function:
+    when a function is pass an arguments to Another function(HOF= height order funcion), the passed funcion is called call back fuction.
+
+Call Back Hell: when a nested Asynchronous funcion in JavaScript is called call back.
+
+Promises: promises is a object, which is countinously see the running event or work complite or not. its also tell what is the output.
+    its have 3 stapes:1) pending
+                      2) resolve -> fullfilled
+                      3) reject ->  fail
+    promises have two part then(resolve) and catch(reject)
+
+Async await:
+    There is a special syntext to work with promises in a more comfortable fashion, called "async/await.
+    it is superisingly asay to understand and use.
+    The async function declaration defines an asynchronous function, which returns an AsyncFunction object.
+    When an async function is called, it returns a Promise. When the async function returns a value, the
+    Promise will be resolved with the returned
+    value. When the async function throws an exception or some value, the Promise will be rejected with the thrown value.
+    An async function can contain an await expression, that pauses the execution of the async function and waits for the
+    passed Promise's resolution, and then resumes the async function's execution and returns the resolved value. 
+
+Array Reduce metod: reduce() excute a reducer fuction on each element of array, resulting in single output value.
+    its take four arguments:
+        accumulater
+        current value
+        current index
+        source array
+
+        arr.reduce(callbck(accumulater, currentValue,[,index[, array]])
+        [, initialValue])
+DRY(do not repeat yourself):
+
+
+q1)diffrence b/w function , call back fuction, fat arrow funcion
+q2) How call call back funcion,
+
+Que)What is the purpose of ‘This’ operator in JavaScript?
+Ans: The JavaScript this keyword refers to the object it belongs to. This has different values depending on 
+    where it is used. In a method, this refers to the owner object and in a function, this refers to the global object.
+
+Que:What is Closure? Give an example?
+Closures are created whenever a variable that is defined outside the current scope is accessed from within some inner 
+    scope. It gives you access to an outer function’s scope from an inner function. In JavaScript, closures are 
+    created every time a function is created. To use a closure, simply define a function inside another function and expose it.
+
+Que:What is the difference between Attributes and Property?
+    Attributes-  provide more details on an element like id, type, value etc.
+    Property-  is the value assigned to the property like type=”text”, value=’Name’ etc.
+
+Que:List out the different ways an HTML element can be accessed in a JavaScript code.
+    Here are the list of ways an HTML element can be accessed in a Javascript code:
+    (i) getElementById(‘idname’): Gets an element by its ID name
+    (ii) getElementsByClass(‘classname’): Gets all the elements that have the given classname.
+    (iii) getElementsByTagName(‘tagname’): Gets all the elements that have the given tag name.
+    (iv) querySelector(): This function takes css style selector and returns the first selected element.
+
+Que: In how many ways a JavaScript code can be involved in an HTML file?
+    There are 3 different ways in which a JavaScript code can be involved in an HTML file:
+    Inline
+    Internal
+    External
+Que: What is difference b/w Local storege & Session storege?
+Ans: Local storege: the data is not sent back to the server for every HTTP request
+    reducing the amount of traffic b/w client and server. it will stay until it is manually
+    cleared through setting or program.
+    Session Storage : it is similar to local storage. the onlay diffrance is while data stored in local
+    storage has no expiration time, data stored in session storage gets cleared when the page session ends.
+    Session Storage will leave when the browser is closed
+
+Que:What is the difference between null & undefined?
+  Undefined means a variable has been declared but has not yet been assigned a value. On the other hand, 
+  null is an assignment value. It can be assigned to a variable as a representation of no value. Also, 
+  undefined and null are two distinct types: undefined is a type itself (undefined) while null is an object.
+
+Que:hat is the difference between undeclared & undefined?
+    Undeclared variables are those that do not exist in a program and are not declared. If the program tries to 
+    read the value of an undeclared variable, then a runtime error is encountered. Undefined variables are those 
+    that are declared in the program but have not been given any value. If the program tries to read the value 
+    of an undefined variable, an undefined value is returned.
+
+Explain passed by value and passed by reference.
+In JavaScript, primitive data types are passed by value and non-primitive data types are passed by reference.

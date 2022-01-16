@@ -1,0 +1,244 @@
+Import & Exports(Modules): Import default and only export of the file Name in the receiving file is up to you
+exp:1. const person = {name:'Max}
+       export default person
+
+       import person from './person' 
+
+    2. export const clean = () => { }
+       export const baseData = () => 10;
+
+       import { baseData } from './xyz'
+       import { clean } from './xyz'
+
+Spread Operator(...): Used to split up array elements OR object properties
+    const newArray = [...oldArry, 1,2]
+    const newObject = {...oldObject, newProp:5}
+
+Rest Operator: Used to merge a list of function arguments in to array
+diffrance b/w Spread and Rest: 
+    The spread operator allows us to spread the value of an array (or any iterable) 
+    across zero or more arguments in a function or elements in an array (or any iterable). 
+    The rest parameter allows us to pass an indefinite number of parameters to a function and access them in an array.
+
+    React JS useRef Hook
+    Difficulty Level : Basic
+    Last Updated : 19 Oct, 2021
+    The useRef hook is the new addition in React 16.8. Before proceeding to this article there is a prerequisite to know about the ref in react.
+    The useRef is a hook that allows to directly create a reference to the DOM element in the functional component. 
+
+Syntax:
+
+const refContainer = useRef(initialValue);
+The useRef returns a mutable ref object. This object has a property called .current. The value is persisted in the refContainer.current property. These values are accessed from the current property of the returned object. The .current property could be initialised to the passed argument initialValue e.g. useRef(initialValue). The object can persist a value for a full lifetime of the component. 
+
+Example: How to access the DOM using useRef hook.
+
+import React, {Fragment, useRef} from 'react';
+ 
+function App() {
+ 
+  // Creating a ref object using useRef hook
+  const focusPoint = useRef(null);
+  const onClickHandler = () => {
+    focusPoint.current.value =
+      "The quick brown fox jumps over the lazy dog";
+      focusPoint.current.focus();
+  };
+  return (
+    <Fragment>
+      <div>
+        <button onClick={onClickHandler}>
+         ACTION
+        </button>
+      </div>
+      <label>
+       Click on the action button to
+       focus and populate the text.
+      </label><br/>
+      <textarea ref={focusPoint} />
+    </Fragment>
+  );
+};
+ 
+export default App;
+ 
+Output: In this example, we have a button called ACTION, whenever we click on the button the onClickHandler is getting triggered 
+and it’s focusing the textarea with help of useRef hook. The focusPoint is the useRef object which is initialised to null and the 
+value is changing to onClick event. Let’s see the output of the above code.
+
+In this post we’ll cover what the useRef Hook is, what we can use it for and some advice for using it.
+The useRef Hook is a function that returns a mutable ref object whose .current property is initialized with the passed argument 
+(initialValue). The returned object will persist for the full lifetime of the component.
+const refContainer = useRef(initialValue);
+There are two main uses of useRef that are explained in the following sections: Accessing the DOM nodes or React elements and keeping a mutable variable.
+Accessing the DOM nodes or React elements
+If you’ve worked with React for a while, you might be used to using refs for this purpose. Below there’s an example of the use of refs in class components:
+
+What are controlled and uncontrolled components?
+    In a controlled component, form data is handled by a React component. The alternative is uncontrolled components, 
+    where form data is handled by the DOM itself. To write an uncontrolled component, instead of writing an event handler for every state 
+    update, you can use a ref to get form values from the DOM.
+
+useReducer: useReducer just like useState, its always return array
+  const [state, dispatchFn] = useReducer(reducerFn, initialState, initFn)
+  state: the state snapshot used in the component re-render/ re-evaluation cycle
+  dispatchFn: a function
+  that can be used to dispatch a new action(i.e triger an update of the function)
+  reducerFn: (prevState, action) => newState
+  A function that is triggered automaticly once an action is dispatched(via dispatchFn())
+  it receives the latest state snapshot and should return the udated state
+  initialState: the initial State
+  initFn: a function to set the initial state programmatically
+
+Context-API: Context-api provides a way to pass data through the component tree without having to pass props down manually at every level.
+  1: create React.createContext
+  2: Provider- The component that provides the value
+  3: Consumer- A component that is consuming the value
+  4: useContext- use context element
+  * import React from 'react';
+    const ColorContext = React.createContext('while');
+    export default ColorContext
+
+  Limitations: React Context is Not optimized for high frequency changes
+
+  How dose react work?
+  A javascript library for build user interfaces, react all about components
+  Re-evaluating components !== Re-rendiring the DOM
+  Re-evaluate = whenever props, state or context changes
+  React executes component functions changes to the real DOM are only made for diffrance between evaluation
+
+  useCallback:The useCallback hook is used when you have a component in which the child is 
+    rerendering again and again without need. Pass an inline callback and an array of dependencies. useCallback 
+    will return a memoized version of the callback that only changes if one of the dependencies has changed
+
+useMemo: is a React hook that memorizes the output of a function. In React, memoization optimizes our components, 
+  avoiding complex re-rendering when it isn't intended. In memoization, the result is remembered, when the same 
+  exact parameters are passed-in subsequently.
+
+what is redux?
+  A state management system for cross-component or app-wide state
+  three sepration of state 1:local state, 
+                                        2:cross-component stare, 
+                                        3:app-wide state
+  1: local state: state that belongs to a single component, 
+  i.e: listening to a user input in a input field, toggling a 'show more' details field
+  should be managed component-internal with useState() / useReducer()
+  2:state that affects multiple components, i.e-open/closed state of a model overlay
+  require 'prop driling'/ 'prop chains'
+  3:app-wide state: state that affects the entire app(most/all components)
+  i.e. require 'prop driling'/ 'prop chains'
+ 
+  how dose redux works?
+  Reducer function--->Centeral Data(State)--->Components--->Action
+  we have exactly one centralised data(state) store, components can not diractly connect or managed
+  store, first need to subscription. components can not be manupulate store, we need to use Reducer function 
+  not useReducer(), 
+  Reducer function are a genral concept==>input:old state+dispatched action = new state object
+  1: craete a store component
+  2: in index.js import {Provider} from 'react-redux'
+     and wrap like:<Provider><app/><Provider/>
+  3: import store from './store/index' and passing props like:<Provider store={store}><app/><Provider/>
+  4: for use the stored data in this perticular component use hooks {useSelector, connect} from react-redux
+     connect use connect store to components
+  5: useDispatch: for dispatch some action in the store
+
+React toolkit:npm install @reduxjs/toolkit
+  there are two things, 1: createReducer, 2:createSlice
+  createSlice is more powerpul  is createReducer
+  createSlice({
+    name: 'counter',
+    initialState,
+    reducers: {
+        increment(state, action) { },
+        decriment() { },
+        incrise() { },
+        toggleCOunter() { }
+    }
+})
+
+configureStore:its use in redux/toolkit combine for store and reducer
+
+redux-saga: Saga works like a separate thread or a background process 
+  that is solely responsible for making your side effects or API calls unlike 
+  redux-thunk, which uses callbacks which may lead to situations like ‘callback hell’ 
+  in some cases. However, with the async/await system, this problem can be minimized in redux-thunk.
+
+redux-thunk:Redux Thunk is a middleware that allows you to call the action creators that return 
+  a function(thunk) which takes the store’s dispatch method as the argument and which is 
+  afterwards used to dispatch the synchronous action after the API or side effects has been finished.
+
+  -----------------------------------------------------------------------------------------------------------------------------------
+Que: What is react?
+Ans: React is a javascript library created for building fast and interactive user interfaces for
+   web and mobile applications. its is an open-source, component-based, front-end library
+   responsible only for the application's view layer. In model view controller(MVC) architecture,
+   the view layer in responsible for how the app looks and feels. React was created by jorden walke, 
+   a software engineer at facebook. React divides the UI in to multiple components, which makes the code
+   easier to debug.
+   Let's take a look at an instagram webpage, entiraly built using React, to get a better understanding of
+   how React works,As the illustration shows React divides the UI into multiple components, which 
+   makes the code easier to debug.
+
+Que:Why React?
+1.Easy creation of dynamic applications
+2.Improved performance
+3.Reusable components
+4.Unidirectional data flow
+5.Small learning curve
+6.It can be used for the development of both web and mobile apps
+
+Que:Features of React
+1.JSX - JavaScript Syntax Extension
+2.Virtual DOM
+3.Performance
+4.Extensions
+5.One-way Data Binding
+
+Que:Components, State, and Props
+
+
+----------------------------------------------------------------------------------------------------------------------
+Que: What is data binding in reactJs?
+Ans:Data binding is a process of connecting the view of elememnt.
+  in reactjs component are rendered to UI and component's logic contains the data to be displayed in the view.
+  the connection b/w data displayed in the UI and the components logic is called data binding in reactjs.
+  reactjs containe one way data binding-
+  a) Component to view : any change in component data would get reflacted in the View
+  b) View to Component : any changes in View would get reflacted in the component
+
+Que:What are the limitations of React?
+Ans:React is just a library, not a full-blown framework,
+  Its library is very large and takes time to understand,
+  It can be little difficult for the novice programmers to understand,
+  Coding gets complex as it uses inline templating and JSX,
+
+Que: What is JSX?
+Ans: JSX is shorthand for javascript XML. This is a type of file used by react whichutilizes the expressiveness of 
+  of javascript along with HTML like template syntex.
+
+Que: Whatb is controlled and uncontrolled component?
+Ans: In a controlled component, form data is handled by a React component. The alternative is uncontrolled components, 
+  where form data is handled by the DOM itself. To write an uncontrolled component, instead of writing an event handler 
+  for every state update, you can use a ref to get form values from the DOM.
+
+Que: JavaScript strict mode?
+Ans: javascript is a loosely typed(dynamic) scripting language,
+if you expect the compiler to give an eoor if you have used a variable before definating it.
+
+Que: What is pure components?
+Ans: the components which do not re-randerds when the values of state and props has been uodated with the same calues. 
+  if the values of the previes state or props and new state or props is same, the component is not re-randerd.
+
+Que: What is state and props?
+Ans:  Props: props statds for properties in react, its immutable, which must be kept pure. flow from parent to child.
+  State: State are heart of React components.its mutable 
+
+Que: What is Memo?
+Ans: memo is a high order component. if your component renders the same result given the same props, you can
+  wrap it in a call to react. memo for a performance boost in some cases by memoizing the result. This means that react will
+  skip rendering the component, and reuse the last rendered result.
+
+Que: What is synthetic event?
+Ans: synthetic events are the objects which act as a cross-browser wrapper around th ebrowser native event.
+  they combine the behavior of diffrent browser into one PAI. this is done to make sure that the event show consistent
+  properties across diffrent browser.

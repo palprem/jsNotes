@@ -1,0 +1,54 @@
+intro:
+    I am working in AllTrak Technologies Pvt Ltd as a React developer, I work on a CRM(Customer Relationship Management). 
+    which helps to store our rider data, like contact details, address, type etc.. . we create the tasks for rider by which they can work on it, on daily basis. 
+    This CRM also track there location and helps our operation team to know that rider are doing there task or not. this also generate 
+    reports which we can download as excel sheet. these CRM also gives ability to track leave management system for our riders so our 
+    riders can apply for leave after that rider's supervisor can accept it or reject that leave request through our CRM. so I build this CRM from 
+    scratch and make this entire project live by 4 month. I manage to solve different problem.
+
+    ----------------------------------------------------------------------------------------------------------------------------------------------------
+
+    I am working in AllTrak Technologies Pvt Ltd as a React developer. currently I am working on a CRM(Customer Relationship Management) Project. Our project started 9-Aug-2021
+    The CRM, which helps rider management, store our rider data, like contact details, address, type, status. we create the tasks for task for rider by 
+
+
+
+
+
+
+
+var addTwoNumbers = function(l1, l2) {
+    let firstArray=[]
+    let SecOfArray=[]
+    let FinalArray=[]
+
+    var reverseArr=function(input) {
+        var ret = new Array;
+        for(var i = input.length-1; i >= 0; i--) {
+            ret.push(input[i]);
+        }
+        return ret;
+    }
+    
+    if(l1.length>=l2.length){
+        firstArray=reverseArr(l1)
+        SecOfArray=reverseArr(l2)
+    }else{
+        firstArray=reverseArr(l2)
+        SecOfArray=reverseArr(l1)
+    }     
+    
+    firstArray.map((arr1Elememnt, arr1Index)=>{
+    let flag=true
+    	SecOfArray.map((arr2Elememnt, arr2Index)=>{
+        if(arr1Index==arr2Index){
+        	FinalArray.push(arr1Elememnt+arr2Elememnt)
+        }
+        		if( arr1Index+1>l2.length && flag){
+          		FinalArray.push(arr1Elememnt)
+                flag=false
+            }
+      })
+    })
+    return FinalArray
+};

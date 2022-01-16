@@ -1,0 +1,82 @@
+a) What is HTML?
+Ans: HTML stand Hyper Text Markup Language. its a Language of World Wide Web.
+    it's a standerd text formatting Language which is used to create and display
+    pages on the web. It's makes the text more interactive and dynamic. it can 
+    turn text in to images, table, links, etc..
+
+b) What are Tags?
+Ans: HTML tags are composed of three things: an opening tag, content and ending tag.
+    HTML documents containe two things: content and tages
+c) How many types of heading dose an HTML contain?
+Ans: there six type of heading. 
+    <h1>Heading no. 1</h1>    
+    <h2>Heading no. 2</h2>    
+    <h3>Heading no. 3</h3>    
+    <h4>Heading no. 4</h4>    
+    <h5>Heading no. 5</h5>    
+    <h6>Heading no. 6</h6>  
+    
+d) How to create a Hyperlink in HTML?
+Ans: The HTML provides an anchor tag to create a hyperlink that links one page to another page. 
+These tags can appear in any of the following ways:
+    Unvisited link - It is displayed, underlined and blue.
+    Visited link - It is displayed, underlined and purple.
+    Active link - It is displayed, underlined and red. 
+
+e) Which HTML tag is used to display the data in the tabular form?
+Ans: The HTML table tag is used to display data in tabular form(row*column)
+    It also manages the layout of the page, e.g., header section, navigation bar, body content, 
+    footer section. Here is the list of tags used while displaying the data in the tabular form:
+
+f) What are some common lists that are used when designing a page?
+Ans: 1)Ordered list - The ordered list displays elements in numbered format. It is represented by <ol> tag.
+    2)Unordered list - The unordered list displays elements in bulleted format. It is represented by <ul> tag.
+    3)Definition list - The definition list displays elements in definition form like in dictionary. The <dl>, 
+    <dt> and <dd> tags are used to define description list.
+
+g) What is the diffrance b/w HTML elements and tag?
+Ans: HTML Tags: Tags are the starting and ending parts of an HTML element. They begin with < symbol and end with > 
+    symbol. Whatever written inside < and > are called tags.
+    HTML elements: Elements enclose the contents in between the tags. They consist of some kind of structure or 
+    expression. It generally consists of a start tag, content and an end tag.<b>This is the content.</b>
+    HTML Attributes: It is used to define the character of an HTML element. It always placed in the opening tag 
+    of an element. It generally provides additional styling (attribute) to the element.<p align="center">This is paragraph.</p>
+    
+h)What is semantic HTML?
+Ans: semantic HTML is a coding style.<b> evsvsvrvvrvsv</b>
+    <i>svsvsdv </i>
+    <strong>dddddddddddddddddddddd</strong>
+    <em>qqqqqqqqqqqqqqqqqqqqqqq</em>
+
+i)What is iframe?
+Ans: An iframe is used to display a web page within a web page.
+
+j)<div> tag?
+And: The div tag is known as Divisiontag.The div tag is used in HTML to make divisions of content on the web page like
+    (text, images, header, footer, navigation bar, etc).
+    It will be displayed div tag each time on a new line, not on the same line.
+
+k)HTML <span> tag?
+Ans: The HTML span element is a generic inline container for inline elements and content. It used to group elements for 
+    styling purposes (by using the class or id attributes).span is an inline tag.
+
+------------------------------------------------------------------------------------------------------------------------
+Que: details tag?
+Ans: <details>
+    <summary>prem</summary>  <summary>prem</summary>
+    <summary>prem</summary>
+    <summary>prem</summary>
+    <summary>prem</summary>
+    <summary>prem</summary>
+    </details>
+
+Que: bdo tag?
+Ans: <p>
+    <bdo dir="rtl">
+    hygtydtesrdfgjhkk;llk
+    </bdo>
+    
+    </p>
+
+Que:abbr tag?
+Abs:<abbr title=""> Short form </abbr>

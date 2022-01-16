@@ -1,0 +1,12 @@
+1)what is react?
+2)what is react roter dom?
+3) what life-cylce?
+4)useState, useEffect, UseParams, all about Hooks,
+5)why bootstarp is responcive?
+6)midia query, sm, md,lg
+7)state, props, media query, css prpperty,
+
+
+1) what is state management
+2)React sychronous or assuronous
+3)

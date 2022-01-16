@@ -1,0 +1,105 @@
+**fav icon
+What is a Nodejs?
+Ans :- Node.js is a javaScript runtime built on Chrome's V8 javaScript engine.
+    Nodejs is a javaScript runtime on the server.
+
+console.log(): work in runtime envoirment, it's not javascript official code, chrome v8 
+    engine support console.log()
+
+REPL: tHE REPL feature of Node is very useful in experimenting with Nodejs codes and to
+    debug javaScript codes.
+
+    Read->Reads user's input , pareses the input into javaScript and data-structure,
+    and stores in memory.
+
+    Eval-> Takes and evaluates the data-structure.
+
+    Print-> Prints the result.
+
+    Loop-> Loops the above command until the user presses ctrl-c twics.
+    
+require("fs")
+append data in file=fs.appendFileSync("read.txt", "how are you i am fine")
+nodejs includes an additional data type called Buffer
+Buffer is mainy used to store binary data
+
+Nodejs web server:
+    To acces web pages of any web application, you need a web server.
+    the web server will handle all the http requests for the web application
+    e.g IIS is web server for ASP.NET web application and Appache is eb server for PHP or java web applications.
+
+    Nodejs provides capabilties to create your own web server whitch will handle HTTP requests asynchronously. you can use web server
+
+HTTP module: Create Node.js Web Server
+    Node.js makes it easy to create a simple web server that processes incoming requests asynchronously.
+    require: for aqqure for module,
+    createServer((req, res))// for createing server
+    lsiten: // listng for port number
+Expressjs is a Nodejs fremework.it's the most popular framework as of now (the most starred on NPM)
+
+Routing: url:// for finding for routing url
+
+JSON stands for javaScript Object notation. JSON is a lightweight format for strong and transporting data.
+JSON is often used when data is sent from a server to a web pages.
+
+API is the acronym for application programing interface, which is a software intermedating that allows
+    two application to talk to each other. each time you see an app like facebook send an instant message
+    , check the weather on your phone, you're usin an api
+
+Events: the concept is quit simple: emitter objects emit named events that cause previously registred listerns
+    to be called. so, an emitter object basically has two main features:
+    Emiting name events.
+    registrering and unregistering listner functions.
+
+Nodejs Streams: Streams are objects that let you read from a source or write data to a destination in 
+    continous fashion. In Nodejs there are four types of streams-
+    Readable - Stream which is used for read operation,
+
+    Writable - -Stream which is used for write operation,
+
+    Duplex - Stream which can be used for both read and write operation,
+
+    Transformation - A ype of duplex stream where the output is computed based on input
+
+    Ech type of stream is an EventEmitter instance and throws servel events at diffrent
+    instance of times. for exp: some of the commmonly used events are-
+    
+    data - This event is fired when there is no more data to read.
+
+    error - This event is fired when there is any error receving or writting data
+
+    finish - This event is fired when all the data has been flushed to underlaying system
+
+
+    ------------------------------------------------------------------------------------------------------------------------------
+
+    Expressjs is a Nodejs fremework.it's the most popular framework as of now (the most starred on NPM)
+
+Expressjs is a web application framework that provides you with a simple API to build webkitRequestAnimationFrame, web apps and back ends
+
+Why do we actually need Expressjs ? How it is useful for us to use with Node.js
+
+1st step: if not camalCase in folder name: npm -y, else: npm init
+
+install: npm install express --save
+
+the callback function has 2 parameter request(req) and response(res).
+the request object(req) represents the HTTP request and 
+has property for the request query string, parameters, body, HTTP headers, etc
+
+similerly, the responce object represents the HTTP responce
+that the express app sends when it receives an HTTP request
+
+Express Routing : 
+
+serving static files in Express:to serve static files such as images, CSS files, and 
+javaScript files, use the express.static built-in middle ware function in Express
+
+    const express  = require('express')
+    const app = express();
+    express.static(root,[options])
+    const path = =require('path')
+    const staticPath= path..join(__dirname, "../public");
+    app.get
+
+Tamplate engines:(Pug, hbs, EJS) its use for add dynamic data

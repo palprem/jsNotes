@@ -1,0 +1,53 @@
+1. install: npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
+2. create a css file : Include Tailwind in your CSS ,/* ./your-css-folder/styles.css */
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+
+3. make  "build:tailwind": "tailwindcss build src/style.css -o public/style.css",
+   and run command :- npm run build:tailwind  
+
+imp classes: h-screen:- Use h-screen to make an element span the entire height of the viewport.
+    place-items-center:- Utilities for controlling how items are justified and aligned at the same time.
+
+What is Max-height?
+    The max-height property is used to set a maximum height of a specified element. It overrides the height 
+    property and prevents the value of the height property from becoming larger than a specified value.
+
+typoGraphy: decoration of text is typoGraphy
+    1: showning left: text-left
+    2: showning right: text-right
+    3: showning center: text-center
+    4: showning left and right equal: text-justify
+    5: text showing: text-opacity-100: 100% visual
+    6: text showing: text-opacity-75: 70% visual
+
+
+-------------------------------------------------------------------------------------------------------------------------
+
+what is Tailwind css?
+    a) Utility-first css
+    b)Rapidly build custom designs
+    c)No pre-built components
+    d)Building blocks, full creative freedom
+    e)Highly customizable
+
+Advntage:
+    a)minimal custom css
+    b)Easy design changes for view files
+    c)better developer experience
+    d)mobile-first design from the start
+    e)A "polished" and "designed" look and feel
+
+Background Classes: .bg-{color}-{shade}
+
+element sizing with REM:
+    1)1rem=document base font
+        1rem = 16px
+        1.25rem = 20px
+    2)no decimal in Tailwind numbering system
+Tailwindnumber system:
+    1)1rem = 4 in Tailwind(muntiplied by 4)
+    2)16px = 1rem = 4 exp: .w-4, 1.2 rem = 5 in Tailwind = .w-5
+
+latter-spacing: .tracking-{spacing},tighter, light, normal, wide, wider, widest

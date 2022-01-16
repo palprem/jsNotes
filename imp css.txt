@@ -1,0 +1,1 @@
+for div element in div: flex  items-center justify-center
