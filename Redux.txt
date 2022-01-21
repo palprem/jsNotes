@@ -1,9 +1,42 @@
 Que: WHat is Redux?
-Ans: Redux is an open-source library made using the scripting language javascript.
-  Redux's primary use lies in managing and centralizing application state and it is usually
-  used along with javascript library.
-  a) Redux includes a single store per application. Rether than placing state information in 
-     multiple stores across the app, redux keeps everything in one region of the application
+Ans: Redux is an open-source library made using the scripting language javascript. Redux's primary use lies in managing and 
+centralizing application state and it is usually used along with javascript library.
+  a) Redux includes a single store per application. Rether than placing state information in multiple stores across the app,
+     redux keeps everything in one region of the application
 
-Que: What is Redux in reactjs?
-Ans: Redux in react is the offical react binding for redux which allows the components in react
+Que: What is Redux in react js?
+Ans: Redux in react is the offical react binding for redux which allows the components in react to read data from a redux store, 
+     and dispatch action to the store for updating the data..The purpose of redux is to help application scale well by providing
+     means to manage the state via a unidiractional data flow model.
+
+Que: State the core principle of redux?
+Ans: a)Single source of truth:the global state of our application is alwayes put away in an object tree inside one store.
+     b)The state is read-only: the only way to change the state of our application is by emitting an action, an object 
+     explaning what has happend.
+     c)Changes are made with pure funcion:this principle means that in order to define how the state tree is being 
+     tranceformed by the actions, we have to write pure reducers.
+
+Que:Highlight the key differences between mapStateToProps() and mapDispatchToProps()?
+Ans:mapStateToProps(): 1)the mapStateToProps() method is used to render the stored data to the component.
+     2)This method's use is to connect the redux state to the props of the react component
+   mapDispatchToProps():1)The mapDispatchToProps() method is used to render the action creaters with props to the component.
+     2)This method's use is to connect redux actions to the react props
+
+Que: What are reducers in Redux'ss architecture?
+Ans: Reducers in Redux's architecture are pure funcions that are used to take the previous state and aaction and return the next state.
+     (previous_state, action)=>new_state
+
+      __________________________________________________
+       |                                                |
+       ^                                                V
+   Dispatch                                          Store
+   event handler                                        |
+       ^                                                 V
+       |                                        ----->Reducer
+       |                                       |        |
+       |                                       |        V
+       |                                       |----->State
+       |                                                 |
+       ------------------------UI-------------------------                    
+
+Que:
