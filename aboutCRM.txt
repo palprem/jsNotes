@@ -11,13 +11,7 @@ intro:
     I am working in AllTrak Technologies Pvt Ltd as a React developer. currently I am working on a CRM(Customer Relationship Management) Project. Our project started 9-Aug-2021
     The CRM, which helps rider management, store our rider data, like contact details, address, type, status. we create the tasks for task for rider by 
 
-
-
-
-
-
-
-var addTwoNumbers = function(l1, l2) {
+    var addTwoNumbers = function(l1, l2) {
     let firstArray=[]
     let SecOfArray=[]
     let FinalArray=[]

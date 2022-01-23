@@ -10,11 +10,9 @@ Ans: Redux in react is the offical react binding for redux which allows the comp
      means to manage the state via a unidiractional data flow model.
 
 Que: State the core principle of redux?
-Ans: a)Single source of truth:the global state of our application is alwayes put away in an object tree inside one store.
-     b)The state is read-only: the only way to change the state of our application is by emitting an action, an object 
-     explaning what has happend.
-     c)Changes are made with pure funcion:this principle means that in order to define how the state tree is being 
-     tranceformed by the actions, we have to write pure reducers.
+Ans: a)Single source of truth:The global state of your app is put away in an object tree inside a single store.
+     b)The state is read-only: State can only be changed by emitting an action, an object that explains what has happened.
+     c)Changes are made with pure funcion: This is to define how the state tree is being transformed by the actions, you have to write pure reducers.
 
 Que:Highlight the key differences between mapStateToProps() and mapDispatchToProps()?
 Ans:mapStateToProps(): 1)the mapStateToProps() method is used to render the stored data to the component.
@@ -22,11 +20,7 @@ Ans:mapStateToProps(): 1)the mapStateToProps() method is used to render the stor
    mapDispatchToProps():1)The mapDispatchToProps() method is used to render the action creaters with props to the component.
      2)This method's use is to connect redux actions to the react props
 
-Que: What are reducers in Redux'ss architecture?
-Ans: Reducers in Redux's architecture are pure funcions that are used to take the previous state and aaction and return the next state.
-     (previous_state, action)=>new_state
-
-      __________________________________________________
+        ________________________________________________
        |                                                |
        ^                                                V
    Dispatch                                          Store
@@ -39,4 +33,101 @@ Ans: Reducers in Redux's architecture are pure funcions that are used to take th
        |                                                 |
        ------------------------UI-------------------------                    
 
-Que:
+Que: Show using code how constants can be used in Redux.
+Ans: export const ADDING_TODO='ADDING_TODO'
+     export const DELELTING_TODO='DLELETING_TODO'
+     1) during action cretion(action.js)
+     import {DELELTING_TODO} from './constant'
+     export function deletingTodo(text){
+          return {type:DELELTING_TODO, text}
+     }
+
+     2)in reducers (in reducers.js)
+     export default (state=[], action)=>{
+          awith(action.type){
+               case EDITING_TODO:
+               return [
+                    ...state,{
+                         text:action.text,
+                         completed:false
+                    }
+               ]
+          }
+     }
+Que: What is the model of redux saga?
+Ans: redux saga is a redux middleware. in other words, it means that it can be started,
+     paused, and aborted from the main application useing statndred redux actions, has access to the entire
+     redux application state, and can also dispatch redux actions.
+
+Que: Describe what is meant by a store in redux?
+Ans: Store in redux is used to carry together all the states, reducers, and actions which create the app.
+     Some of the responcibilty of the store are as follows:
+     1)The state of the current application from inside is help by the redux store.
+     2)We can access the current state using store.getState()
+     3)We can update the state using store.dispatch(action)
+     4)we can alse register listener callbacks using the store.subscriber(listener)
+
+Que: Name all the Redux Store methods?
+Ans: 1)getState()
+     2)subscribe(listner)
+     3)dispatch(action)
+     4)replaceReducer(nextReducer)
+
+Que: What do you understand about Redux Thunk?
+Ans: Redux thunk middleware and it dose not have to be pure. in other words, the function is allowed to
+     have side effects, including executing asynchronous API calls.it can even dispatch actions.Redux thunk
+     is used to delay the dispatch of an action, or to dispatch in the action.
+Que: What are the workflow features in Redux?
+Ans: 1)Reset: The state of the store is allowed to be reset.
+     2)Revert:Revert or Rollback to the last committed state is allowed.
+     3)Sweep:Every disabled actin which we have fored unintentionally will be removed.
+     4)Commit:The current state is made the initial state
+
+Que: How can we use connect from react redux?
+Ans: in order to use connect from react redux, we will have to follow a couple of steps to use our store in our container
+     1)Firstly, we use the mapStateToProps(): This would map the state variables from our store to the props which we specify.
+     2)Secondly, we connect the above props to our container: The object returned by the mapStateToProps component is connected to the container.
+
+Que: What is the typical flow of data in a React + Redux app?
+Ans: Call back from the UI component dispatches an action with a payload; these dispatched actions are 
+     intercepted and receved by the reducers. this interception will genrate a new new application state.
+     from here, the action will be propageted down through a heirarchy of components from the redux store
+
+Que: What is store in redux?
+Ans: The store holds the application state and supplies the helper methods for accessing the state. register
+     listener and dispatch aaction. there is only one store while using redux. the store is configured via 
+     the createStorefunction. thre single store represents the entire state.reducer return a state via action.
+     export function configureStore(initialState) {
+     return createStore(rootReducer, initialState);
+     }
+
+     The root reducer is a collection of all reducers in the application.
+
+     const rootReducer = combineReducers({
+     donors: donorReducer,
+     });
+
+Que: Explain Reducers in Redux?
+Ans: The state of a store is updated by means of reducers functions. A stable collection of reducers from a store,
+     and each of the stores maintains a seprate state associated with itself. To update the array of payload, we 
+     should define payload application.
+    The reducer as follows.
+     (previousState, action) => newState
+     reducers receved the initial state and action. based in the action type, it returns new state for the store.
+     the state maintained by reducers is immutable.
+
+Que: Explain action’s in Redux?
+Ans: Actions in redux are functions that return an action object. The action-type and the action data are peaked in
+     the action object. Which also allows a payload to be added to the system. actions send data b/w the store the
+     application.The actions produce all information retrieved by the store.
+     const addTodoAction = {
+      type: 'ADD',
+      payload: 'Buy-milk'
+     }
+
+Que: Differentiate b/w react redux and context api?
+Ans: react-redux: a)To use this in the application, you need to code it separately and then need to merge then.
+     b) redux is much more powerful and prevides a large number of features
+     react-context:a) this can be used in the application directly and best for passed the data to the deeply
+     nested components
+     b) context API dosen't provide a large number of features.
