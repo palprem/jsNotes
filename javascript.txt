@@ -350,3 +350,67 @@ Que:hat is the difference between undeclared & undefined?
 
 Explain passed by value and passed by reference.
 In JavaScript, primitive data types are passed by value and non-primitive data types are passed by reference.
+
+
+
+------------------------------------------------------------------------------------------------------------------------------
+JavaScript: JavaScript is a scripting or programming language that allows you to implement complex features on web pages
+JavaScript (often shortened to JS) is a lightweight, interpreted, object-oriented language with first-class functions, 
+and is best known as the scripting language for Web pages, but it's used in many non-browser environments as well.
+    -JavaScript on the front-end
+    -JavaScript that runs in a browser
+    -Add interactivity to web pages
+    -Animation, web forms, UI elements, using API's & data
+    -Using morden JavaScript syntex & techniques
+
+Data types: there are 7 type of data type in JavaScript
+    -Number
+    -String
+    -Boolean
+    -Null
+    -Object
+    -Undefind
+    -Object = Complex data structure- Array, Dates, Literls etc
+    -Symbol = Used with number
+
+    1-String: let str= 'palpremkumar96@gmail.com'
+        a-str.lastIndexOf('p')//0
+        b-str.slice(2,5)//lpr
+        c-str.substr(2,5)//lpre
+        d-str.replace('p','m')//malpremkumar96@gmail.com
+        e-str.replaceAll('p','m')//malmremkumar96@gmail.
+        
+    2-Number: let result=5*(10-3)*2 //70
+              let result=5*(10-3)**2 //245 //** means exponential
+
+    Array:Arrays are a special type of objects. The typeof operator in JavaScript returns "object" for arrays. But, JavaScript 
+        arrays are best described as arrays. Arrays use numbers to access its "elements".
+
+    Argument. Parameter. When a function is called, the values that are passed during the call are called as arguments. The values 
+        which are defined at the time of the function prototype or definition of the function are called as parameters
+
+    What is this?
+        In JavaScript, the this keyword refers to an object.
+        Which object depends on how this is being invoked (used or called).
+        The this keyword refers to different objects depending on how it is used
+
+What is Closures?
+Ans: Closures are inner functions that have access to outer function's variables and parameters. Even after theouter function's executuion
+    is finished, the inner functions have access to the variables in the outer function.
+
+    callback funcion: const myFun=(callBackFun)=>{
+    let value=500
+    callBackFun(value)
+}
+
+myFun(function(val){
+    console.log('value', val)
+})  
+
+let people=['mario','luigi', 'prem','pal','raja','kamal']
+
+let logPerson=((person)=>{
+    console.log('person:', person)
+})
+
+people.forEach(logPerson)

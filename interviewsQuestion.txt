@@ -37,3 +37,11 @@ what is hosting in javascript?
 Ans: JavaScript Hoisting refers to the process whereby the interpreter appears to move the declaration of 
    functions, variables or classes to the top of their scope, prior to execution of the code. Hoisting 
    allows functions to be safely used in code before they are declared.
+
+what is memoization: memoization is a technique where, whenever the parent component re-renders, the child
+    component re-renders only if there's a change in the props. If there's no change in the props, it won't 
+    execute the render method and will return the cached result.
+
+what is useReducers:The useReducer Hook accepts two arguments. useReducer(<reducer>, <initialState>) The reducer 
+     function contains your custom state logic and the initialState can be a simple value but generally will contain 
+     an object. The useReducer Hook returns the current state and a dispatch method.
