@@ -239,6 +239,19 @@ Ans: memo is a high order component. if your component renders the same result g
   skip rendering the component, and reuse the last rendered result.
 
 Que: What is synthetic event?
-Ans: synthetic events are the objects which act as a cross-browser wrapper around th ebrowser native event.
+Ans: synthetic events are the objects which act as a cross-browser wrapper around the browser native event.
   they combine the behavior of diffrent browser into one PAI. this is done to make sure that the event show consistent
   properties across diffrent browser.
+
+Que:What are the predefined prop types present in react?
+Ans: There are five main predefined prop type in react
+      - React.PropTypes.bool
+      - React.PropTypes.func
+      - React.PropTypes.node
+      - React.PropTypes.number
+      - React.PropTypes.string
+
+What is react Fiber?
+    -it's a new engine in react. it is the reimplementon core alorethim in react 16,
+    -the main goal of react fiber is to ensure that there are incremental rendering facilities for the virtual DOM.
+    -the increase efficiency when rendering animations, getstures, etc. and also helps in assigning priority to updates based on the requirement, there by increasing overall efficiency.
