@@ -255,3 +255,8 @@ What is react Fiber?
     -it's a new engine in react. it is the reimplementon core alorethim in react 16,
     -the main goal of react fiber is to ensure that there are incremental rendering facilities for the virtual DOM.
     -the increase efficiency when rendering animations, getstures, etc. and also helps in assigning priority to updates based on the requirement, there by increasing overall efficiency.
+
+  What are Hooks in react?
+    -Hooks are used to make use of the state and other features without having to explicity write a class. hooks were added to the react version, v16.8.
+    -The stateful logic can b extracted from a component easily, alongside testing and reusing it.
+    - All of this is one without making any changes to he component hierarchy.
